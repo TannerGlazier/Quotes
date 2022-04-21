@@ -10,5 +10,5 @@
     <li>Subject:  @Model.Subject</li>
     <li>Citation: @Model.Citation</li>
 </ul>
-<a asp-controller="Home" asp-action="Edit" asp-route-quoteid="@Model.QuoteId">Edit</a>
-<a asp-controller="Home" asp-action="Delete" asp-route-quoteid="@Model.QuoteId">Delete</a>
+<a class="btn btn-warning"asp-controller="Home" asp-action="Edit" asp-route-quoteid="@Model.QuoteId">Edit</a>
+<a class="btn btn-danger"asp-controller="Home" asp-action="Delete" asp-route-quoteid="@Model.QuoteId">Delete</a>
