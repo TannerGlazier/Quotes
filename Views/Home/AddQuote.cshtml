@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Enter Quote";
+}
+
+@model Quote 
+<h1>Enter a Quote</h1>
+<form method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <label asp-for="QuoteText">Quote</label><br />
+    <input asp-for="QuoteText" /><br />
+
+    <label asp-for="Author">Author</label><br />
+    <input asp-for="Author" /><br />
+
+    <label asp-for="Date">Date</label><br />
+    <input asp-for="Date" /><br />
+
+    <label asp-for="Subject">Subject</label><br />
+    <input asp-for="Subject" /><br />
+
+    <label asp-for="Citation">Citation</label><br />
+    <input asp-for="Citation" /><br /><br />
+
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Quote>
+<div class="text-center">
+    <h1 class="display-4">Welcome, See some good Quotes!</h1>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Quote</td>
+            <td>Author</td>
+        </tr>
+    </thead>
+    <tbody>
+        @*for every record in the database, create a row with all the information and the option to edit or delete that record*@
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.QuoteText</td>
+                <td>@x.Author</td>
+                <td><a asp-controller="Home" asp-action="Details" asp-route-quoteid="@x.QuoteId">Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
